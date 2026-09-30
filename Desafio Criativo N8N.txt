@@ -1,0 +1,65 @@
+Quero criar uma automação no N8N para realizar o atendimento inicial automático de novos leads que entrarem em contato pelo WhatsApp após clicarem em um anúncio de produto.
+
+Público responsável:
+Equipe comercial
+
+Resultado esperado:
+Automatizar o atendimento inicial dos novos leads, utilizando IA para responder dúvidas comuns com base no script de vendas, enquanto a equipe comercial assume perguntas específicas, situações mais complexas e o fechamento da venda.
+
+Ferramentas envolvidas:
+
+API do WhatsApp, Supabase e IA.
+
+Fluxo desejado:
+
+1. Receber uma nova mensagem de um lead pelo WhatsApp.
+2. Identificar o número do telefone e verificar no Supabase se o contato já existe.
+3. Se for um novo lead, cadastrar suas informações no Supabase.
+4. Enviar a mensagem para a IA.
+5. IA responde utilizando apenas as informações disponíveis no script de vendas.
+6. Se a dúvida estiver fora do script ou exigir contato humano, encaminhar o atendimento para a equipe comercial.
+7. Registrar as interações e atualizar o status do lead no Supabase.
+8- Registrar o lead como venda fechada ou contato em aberto para follow-up, conforme o resultado do atendimento
+
+Regras importantes:
+
+- IA deve utilizar somente as informações presentes no script de vendas.
+- IA não deve inventar informações ou respostas que não estejam no script.
+- Somente novos contatos devem iniciar o fluxo automático de atendimento.
+- Leads antigos não devem receber automaticamente a mesma abordagem de primeiro contato.
+- Perguntas complexas ou que não possam ser respondidas pelo script devem ser enviadas para a equipe comercial.
+- As interações devem ser registradas no Supabase.
+
+
+Prompt:
+
+Atue como um especialista em N8N e automações de atendimento com IA.
+
+Crie o planejamento de uma automação no N8N para realizar o atendimento inicial automático de novos leads que entrarem em contato pelo WhatsApp após clicarem em um anúncio de produto.
+
+Público:
+Equipe comercial.
+
+Fluxo:
+
+1. Receber uma nova mensagem de um lead pelo WhatsApp.
+
+2. Identificar o número de telefone do contato.
+
+3. Consulta o Supabase para verificar se o lead já existe.
+
+4. Se for um novo contato, cadastrar o lead no Supabase.
+
+5. Enviar o material de script de vendas para contexto da IA.
+
+6. A IA deve responder ao lead utilizando apenas as informações disponíveis no script de vendas.
+
+7. Se a pergunta não estiver no script ou for complexa, o atendimento deverá ser direcionado para a equipe comercial.
+
+8. Registrar as interações realizadas.
+
+9. Atualizar o status do lead no Supabase.
+
+Nós que que podem ser utilizados:
+
+WhatsApp Trigger - Edit Fields - consulta no Supabase - verificação se o lead é novo ou antigo - cadastro ou atualização do lead - IA - verificação da necessidade de atendimento humano - envio da resposta ou encaminhamento para a equipe comercial - registro da interação e atualização do status no Supabase
